@@ -73,11 +73,11 @@ export default function ScanOutput() {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <p className="text-sm text-muted-foreground">Verdict</p>
-                <p className="text-lg font-semibold capitalize">{result.verdict}</p>
+                <p className={`text-lg font-semibold capitalize ${result.risk_score >= 55 || result.verdict === 'unsafe' || result.verdict === 'block' ? 'text-red-500' : 'text-green-500'}`}>{result.verdict}</p>
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Risk Score</p>
-                <p className="text-lg font-semibold">{result.risk_score.toFixed(1)} / 100</p>
+                <p className={`text-lg font-semibold ${result.risk_score >= 55 ? 'text-red-500' : 'text-green-500'}`}>{result.risk_score.toFixed(1)} / 100</p>
               </div>
             </div>
             <div>
