@@ -19,7 +19,7 @@ const Docs = () => {
             <ArrowLeft className="w-4 h-4" /> Home
           </button>
           <button onClick={() => navigate('/dashboard')} className="text-sm font-medium hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors">Dashboard</button>
-          <a href={`${import.meta.env.VITE_API_URL || 'http://localhost:8001'}/docs`} target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors">API Docs</a>
+          <a href={`${import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:8001' : 'https://intellectsafe.onrender.com')}/docs`} target="_blank" rel="noopener noreferrer" className="text-sm font-medium hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors">API Docs</a>
           <ThemeToggle />
         </div>
       </nav>

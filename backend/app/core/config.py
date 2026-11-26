@@ -33,7 +33,7 @@ class Settings(BaseSettings):
     API_V1_PREFIX: str = "/api/v1"
     # Store as string, parse as list via property (pydantic-settings can't parse comma-separated lists)
     CORS_ORIGINS: str = Field(
-        default="http://localhost:3002,http://localhost:3003,http://localhost:3004,http://localhost:3005,http://localhost:5173,https://intellect-safe.vercel.app"
+        default="http://localhost:3002,http://localhost:3003,http://localhost:3004,http://localhost:3005,http://localhost:5173,https://intellectsafe.vercel.app"
     )
 
     @property

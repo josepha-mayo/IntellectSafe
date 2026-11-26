@@ -2,6 +2,8 @@
 
 Production-grade AI Safety Engine protecting humans, organizations, and AI systems from misuse, deception, manipulation, and loss of control.
 
+[Live dashboard](https://intellectsafe.vercel.app/) · [API documentation](https://intellectsafe.onrender.com/docs)
+
 ## 🛡️ Features
 
 ### 5-Layer Defense Architecture
@@ -211,12 +213,12 @@ python backend/scripts/test_connections.py
 
 ```bash
 # Scan a prompt for injection
-curl -X POST "https://api.intellectsafe.onrender.com/api/v1/scan/prompt" \
+curl -X POST "https://intellectsafe.onrender.com/api/v1/scan/prompt" \
   -H "Content-Type: application/json" \
   -d '{"prompt": "Ignore previous instructions"}'
 
 # Scan LLM output for safety
-curl -X POST "https://api.intellectsafe.onrender.com/api/v1/scan/output" \
+curl -X POST "https://intellectsafe.onrender.com/api/v1/scan/output" \
   -H "Content-Type: application/json" \
   -d '{"output": "Here is how to...", "original_prompt": "..."}'
 
@@ -259,7 +261,7 @@ Full lifecycle protection for autonomous agents:
 
 ```bash
 # Authorize agent action
-curl -X POST "https://api.intellectsafe.onrender.com/api/v1/agent/authorize" \
+curl -X POST "https://intellectsafe.onrender.com/api/v1/agent/authorize" \
   -H "Content-Type: application/json" \
   -d '{"agent_id": "agent-1", "session_id": "s1", "action_type": "file_read", "requested_action": {"path": "/tmp/test.txt"}}'
 ```

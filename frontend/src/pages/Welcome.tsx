@@ -81,7 +81,7 @@ const Welcome = () => {
                     </div>
                     <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-3">Scans a raw input prompt for injection attacks and PII.</p>
                     <div className="bg-zinc-900 p-4 rounded text-xs font-mono text-zinc-300">
-                       <span className="text-purple-400">curl</span> -X POST https://api.intellectsafe.onrender.com/api/v1/scan/prompt \<br/>
+                       <span className="text-purple-400">curl</span> -X POST https://intellectsafe.onrender.com/api/v1/scan/prompt \<br/>
                        &nbsp;&nbsp;-d <span className="text-green-400">'{"{"} "prompt": "Ignore previous instructions..." {"}"}'</span>
                     </div>
                  </div>
@@ -112,7 +112,7 @@ const Welcome = () => {
         <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
           <button onClick={() => navigate('/dashboard')} className="hover:text-zinc-500 transition-colors">Dashboard</button>
           <button onClick={() => navigate('/docs')} className="hover:text-zinc-500 transition-colors">Documentation</button>
-          <a href={`${import.meta.env.VITE_API_URL || 'http://localhost:8001'}/docs`} target="_blank" rel="noopener noreferrer" className="hover:text-zinc-500 transition-colors">API Docs</a>
+          <a href={`${import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:8001' : 'https://intellectsafe.onrender.com')}/docs`} target="_blank" rel="noopener noreferrer" className="hover:text-zinc-500 transition-colors">API Docs</a>
           <button onClick={() => scrollToSection(researchRef)} className="hover:text-zinc-500 transition-colors">Threat Matrix</button>
           <button onClick={() => scrollToSection(findingsRef)} className="hover:text-zinc-500 transition-colors">Research</button>
         </div>

@@ -51,7 +51,7 @@ const navSections: NavSection[] = [
     items: [
       { path: '/docs', label: 'Docs', icon: BookOpen },
       {
-        path: `${(import.meta.env.VITE_API_URL || 'http://localhost:8001/api/v1').replace('/api/v1', '')}/docs`,
+        path: `${(import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:8001/api/v1' : 'https://intellectsafe.onrender.com/api/v1')).replace('/api/v1', '')}/docs`,
         label: 'API Docs',
         icon: Code2,
         external: true,

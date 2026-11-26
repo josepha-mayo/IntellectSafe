@@ -24,7 +24,7 @@ services:
       - key: OPEN_ROUTER_KEY
         sync: false
       - key: CORS_ORIGINS
-        value: https://intellect-safe.vercel.app
+        value: https://intellectsafe.vercel.app
       - key: PYTHON_VERSION
         value: "3.11.11"
 
